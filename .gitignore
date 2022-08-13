@@ -1,129 +1,33 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+pip install liionpack
+Collecting liionpack
+  Using cached liionpack-0.3.2-py3-none-any.whl (31 kB)
+Collecting textwrapper
+  Using cached textwrapper-1.0.2-py3-none-any.whl (3.4 kB)
+Collecting pandas
+  Using cached pandas-1.4.3-cp310-cp310-win_amd64.whl (10.5 MB)
+Collecting tqdm
+  Using cached tqdm-4.64.0-py2.py3-none-any.whl (78 kB)
+Collecting Ipython
+  Using cached ipython-8.4.0-py3-none-any.whl (750 kB)
+Collecting matplotlib
+  Using cached matplotlib-3.5.3-cp310-cp310-win_amd64.whl (7.2 MB)
+Collecting redis
+  Using cached redis-4.3.4-py3-none-any.whl (246 kB)
+Collecting liionpack
+  Using cached liionpack-0.3.1-py3-none-any.whl (31 kB)
+Collecting dask[complete]
+  Using cached dask-2022.8.0-py3-none-any.whl (1.1 MB)
+Collecting liionpack
+  Using cached liionpack-0.3-py3-none-any.whl (28 kB)
+ERROR: Cannot install liionpack==0.3, liionpack==0.3.1 and liionpack==0.3.2 because these package versions have conflicting dependencies.
 
-# C extensions
-*.so
+The conflict is caused by:
+    liionpack 0.3.2 depends on ray
+    liionpack 0.3.1 depends on ray
+    liionpack 0.3 depends on ray
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
